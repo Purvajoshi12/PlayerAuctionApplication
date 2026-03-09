@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Teams List</h2>
+
+<div class="card">
+    {% if teams %}
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Team ID</th>
+                    <th>Team Name</th>
+                    <th>Remaining Budget</th>
+                    <th>Owner Name</th>
+                    <th>Owner Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for team in teams %}
+                <tr>
+                    <td>{{ team.team_id }}</td>
+                    <td>{{ team.team_name }}</td>
+                    <td>₹{{ team.budget }}</td>
+                    <td>{{ team.owner_name if team.owner_name else 'Not Assigned' }}</td>
+                    <td>{{ team.owner_email if team.owner_email else 'Not Assigned' }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No teams added yet.</p>
+    {% endif %}
+</div>
+
+{% endblock %}

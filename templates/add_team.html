@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Create Team</h2>
+
+<div class="card">
+    <form method="POST" class="form-layout">
+        <label>Team Name</label>
+        <input type="text" name="team_name" required>
+
+        <label>Budget</label>
+        <input type="number" name="budget" required>
+
+        <hr>
+
+        <h3>Team Owner Details</h3>
+
+        <label>Owner Name</label>
+        <input type="text" name="owner_name" required>
+
+        <label>Owner Email</label>
+        <input type="email" name="owner_email" required>
+
+        <label>Owner Password</label>
+        <input type="password" name="owner_password" required>
+
+        <button type="submit">Create Team</button>
+    </form>
+</div>
+
+{% endblock %}

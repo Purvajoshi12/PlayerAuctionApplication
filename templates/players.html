@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Player Management</h2>
+
+<div class="card">
+    {% if players %}
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Player ID</th>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Base Price</th>
+                    <th>Status</th>
+                    <th>Set / Update Base Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for player in players %}
+                <tr>
+                    <td>{{ player.player_id }}</td>
+                    <td>{{ player.name }}</td>
+                    <td>{{ player.role }}</td>
+                    <td>₹{{ player.base_price }}</td>
+                    <td>
+    {% if player.status == 'SOLD' %}
+        <span class="badge sold">SOLD</span>
+    {% elif player.status == 'UNSOLD' %}
+        <span class="badge unsold-final">UNSOLD</span>
+    {% else %}
+        <span class="badge pending">PENDING</span>
+    {% endif %}
+</td>
+                    <td>
+                        <form action="/update_base_price/{{ player.player_id }}" method="POST" class="inline-form">
+                            <input type="number" name="base_price" value="{{ player.base_price }}" min="0" required>
+                            <button type="submit">Save</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No players registered yet.</p>
+    {% endif %}
+</div>
+
+{% endblock %}

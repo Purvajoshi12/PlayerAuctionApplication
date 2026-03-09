@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Auction Summary</h2>
+
+<div class="summary-grid">
+    {% for team in summary_data %}
+    <div class="card team-summary-card">
+        <h3>{{ team.team_name }}</h3>
+        <p class="budget-box">Remaining Budget: ₹{{ team.remaining_budget }}</p>
+
+        {% if team.players %}
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Player Name</th>
+                        <th>Role</th>
+                        <th>Sold Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for player in team.players %}
+                    <tr>
+                        <td>{{ player.name }}</td>
+                        <td>{{ player.role }}</td>
+                        <td>₹{{ player.sold_price }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p class="empty-text">No players bought yet.</p>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
