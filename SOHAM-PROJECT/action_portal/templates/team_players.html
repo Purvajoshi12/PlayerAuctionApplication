@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>All Players</h2>
+
+<div class="card">
+    {% if players %}
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Player ID</th>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Base Price</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for player in players %}
+                <tr>
+                    <td>{{ player.player_id }}</td>
+                    <td>{{ player.name }}</td>
+                    <td>{{ player.role }}</td>
+                    <td>₹{{ player.base_price }}</td>
+                    <td>
+                        {% if player.status == 'SOLD' %}
+                            <span class="badge sold">SOLD</span>
+                        {% else %}
+                            <span class="badge unsold">UNSOLD</span>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No players available.</p>
+    {% endif %}
+</div>
+
+{% endblock %}

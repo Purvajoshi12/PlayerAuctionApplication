@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Player Dashboard</h2>
+
+<div class="card">
+    {% if player %}
+        <p><strong>Name:</strong> {{ player.name }}</p>
+        <p><strong>Role:</strong> {{ player.role }}</p>
+        <p><strong>Base Price:</strong> ₹{{ player.base_price }}</p>
+        <p><strong>Status:</strong> {{ player.status }}</p>
+
+        {% if player.status == 'SOLD' %}
+            <p><strong>Sold Team:</strong> {{ player.team_name }}</p>
+            <p><strong>Sold Amount:</strong> ₹{{ player.sold_price }}</p>
+        {% else %}
+            <p><strong>Sold Team:</strong> Not assigned yet</p>
+            <p><strong>Sold Amount:</strong> Not available yet</p>
+        {% endif %}
+    {% else %}
+        <p>Player profile not found.</p>
+    {% endif %}
+</div>
+
+{% endblock %}

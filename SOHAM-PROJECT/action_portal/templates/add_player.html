@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Add Player</h2>
+
+<div class="card">
+    <form method="POST" class="form-layout">
+        <label>Player Name</label>
+        <input type="text" name="name" required>
+
+        <label>Role</label>
+        <input type="text" name="role" required>
+
+        <label>Base Price</label>
+        <input type="number" name="base_price" required>
+
+        <button type="submit">Add Player</button>
+    </form>
+</div>
+
+{% endblock %}

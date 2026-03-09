@@ -1,0 +1,424 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f9;
+}
+
+.navbar {
+    background: #1e293b;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+.navbar nav a:hover {
+    color: #38bdf8;
+}
+
+.container {
+    padding: 30px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+button {
+    background: #2563eb;
+    border: none;
+    padding: 8px 16px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+input {
+    padding: 6px;
+    margin: 5px;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.hero-section h1 {
+    margin: 0 0 10px 0;
+}
+
+.status-box {
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.status-box.live {
+    background: #0f766e;
+}
+
+.status-box.completed {
+    background: #166534;
+}
+
+.player-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.player-card h3 {
+    margin-top: 0;
+    color: #1e3a8a;
+}
+
+.bid-form {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.bid-form label {
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.bid-form input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+}
+
+.link-btn {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    background: white;
+    color: #166534;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: white;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.styled-table th {
+    background: #1e293b;
+    color: white;
+}
+
+.styled-table tr:hover {
+    background: #f8fafc;
+}
+
+.form-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 500px;
+}
+
+.form-layout label {
+    font-weight: bold;
+}
+
+.form-layout input {
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+}
+
+.badge {
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+.badge.sold {
+    background: #16a34a;
+}
+
+.badge.unsold {
+    background: #f59e0b;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 20px;
+}
+
+.team-summary-card h3 {
+    margin-top: 0;
+    color: #1e3a8a;
+}
+
+.budget-box {
+    background: #dbeafe;
+    color: #1e3a8a;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.empty-text {
+    color: #64748b;
+    font-style: italic;
+}
+
+.bid-form select,
+.form-layout select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background: white;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card h3 {
+    margin: 0;
+    font-size: 28px;
+    color: #1e3a8a;
+}
+
+.stat-card p {
+    margin-top: 8px;
+    color: #475569;
+    font-weight: bold;
+}
+
+.quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.action-btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #1e3a8a;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.action-btn:hover {
+    background: #1d4ed8;
+}
+
+.inline-form {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.inline-form input {
+    width: 110px;
+    padding: 8px;
+}
+
+.auction-stage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.current-player-card {
+    text-align: center;
+    padding: 30px;
+}
+
+.current-player-card h2 {
+    margin: 10px 0;
+    font-size: 32px;
+    color: #1e3a8a;
+}
+
+.auction-badge {
+    display: inline-block;
+    background: #dc2626;
+    color: white;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+    font-size: 12px;
+}
+
+.base-price-box {
+    display: inline-block;
+    background: #dbeafe;
+    color: #1e3a8a;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin: 12px 0;
+}
+
+.auction-action-card h3 {
+    margin-top: 0;
+}
+
+.secondary-btn {
+    background: #475569;
+}
+
+.secondary-btn:hover {
+    background: #334155;
+}
+
+.badge.pending {
+    background: #2563eb;
+}
+
+.badge.unsold-final {
+    background: #f59e0b;
+}
+
+.section-title {
+    margin: 25px 0 15px;
+    color: #1e293b;
+}
+
+.progress-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 16px;
+    background: #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #2563eb;
+    border-radius: 10px;
+}
+
+.team-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 25px;
+}
+
+.team-mini-card h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #1e3a8a;
+}
+
+.team-mini-card p {
+    margin: 8px 0;
+}
+
+.auction-stage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.current-player-card {
+    text-align: center;
+    padding: 30px;
+}
+
+.current-player-card h2 {
+    margin: 10px 0;
+    font-size: 32px;
+    color: #1e3a8a;
+}
+
+.auction-badge {
+    display: inline-block;
+    background: #dc2626;
+    color: white;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+    font-size: 12px;
+}
+
+.base-price-box {
+    display: inline-block;
+    background: #dbeafe;
+    color: #1e3a8a;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin: 12px 0;
+}
+
+.auction-action-card h3 {
+    margin-top: 0;
+}
+
+.secondary-btn {
+    background: #475569;
+}
+
+.secondary-btn:hover {
+    background: #334155;
+}
